@@ -19,12 +19,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-    - name: Run tests
-      run: |
-        cd $GITHUB_WORKSPACE
-        pytest
-
     - name: Add parent directory to PYTHONPATH
       run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
